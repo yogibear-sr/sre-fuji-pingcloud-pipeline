@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-          emailext body: 'Test Message',
-                subject: 'Test Subject',
+          emailext body: 'Running Mount-Fuji script',
+                subject: 'Mount Fuji Starting',
                      to: 'subhashrehan@gmail.com'
         sh 'python3 main.py'
       }
