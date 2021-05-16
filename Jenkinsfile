@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        mail(body: 'project build successful', from: 'subhashrehan@gmail.com', replyTo: 'subhashrehan@gmail.com', subject: 'project build successful', to: 'subhashrehan@gmail.com')
+          emailext body: 'Test Message',
+                subject: 'Test Subject',
+                     to: 'subhashrehan@gmail.com'
         sh 'python3 main.py'
       }
     }
